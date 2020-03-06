@@ -1,0 +1,15 @@
+{
+  "plugins": {
+    "posthtml-img-autosize": {
+      "root": "./img"
+    },
+    "posthtml-modules": {
+      "root": "./"
+    },
+    "posthtml-lazyload": {
+      "root": "./",
+      "loading": "lazy",
+      "class": "lazyload"
+    }
+  }
+}

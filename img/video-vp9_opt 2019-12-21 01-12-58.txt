@@ -1,0 +1,117 @@
+HandBrake Activity Log for Session: 2019-12-21T09:12:58Z
+Handbrake Version: 1.3.0 (2019110900)
+video-vp9_opt.mp4
+Preset: Fast 1080p30 (Modified)
+[01:12:58] macgui: QueueCore prevented sleep
+[01:12:58] macgui: QueueCore scanning specifically for title: 1
+[01:12:58] CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+[01:12:58]  - Intel microarchitecture Kaby Lake
+[01:12:58]  - logical processor count: 12
+[01:12:58] hb_scan: path=/Users/todd/courses/css/udemy/advanced-css-course/Natours/starter/img/video.webm, title_index=1
+udfread ERROR: ECMA 167 Volume Recognition failed
+disc.c:323: failed opening UDF image /Users/todd/courses/css/udemy/advanced-css-course/Natours/starter/img/video.webm
+disc.c:424: error opening file BDMV/index.bdmv
+disc.c:424: error opening file BDMV/BACKUP/index.bdmv
+bluray.c:2585: nav_get_title_list(/Users/todd/courses/css/udemy/advanced-css-course/Natours/starter/img/video.webm/) failed
+[01:12:58] bd: not a bd - trying as a stream/file instead
+libdvdnav: Using dvdnav version 6.0.1
+libdvdread: Encrypted DVD support unavailable.
+libdvdread:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.IFO failed
+libdvdread:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.BUP failed
+libdvdread: Can't open file VIDEO_TS.IFO.
+libdvdnav: vm: failed to read VIDEO_TS.IFO
+[01:12:58] dvd: not a dvd - trying as a stream/file instead
+Input #0, matroska,webm, from '/Users/todd/courses/css/udemy/advanced-css-course/Natours/starter/img/video.webm':
+  Metadata:
+    encoder         : Lavf56.36.100
+    creation_time   : 2016-12-12T03:11:55.000000Z
+  Duration: 00:00:11.01, start: 0.000000, bitrate: 5222 kb/s
+    Stream #0:0: Video: vp8, yuv420p(progressive), 1920x1080, SAR 1:1 DAR 16:9, 23.98 fps, 23.98 tbr, 1k tbn, 1k tbc (default)
+[01:12:58] scan: decoding previews for title 1
+[01:12:59] scan: 10 previews, 1920x1080, 23.976 fps, autocrop = 0/0/0/0, aspect 16:9, PAR 1:1
+[01:12:59] Title is likely interlaced or telecined (10 out of 10 previews). You should do something about that.
+[01:12:59] libhb: scan thread found 1 valid title(s)
+[01:12:59] macgui: QueueCore scan done
+[01:12:59] macgui: QueueCore started encoding video-vp9_opt.mp4
+[01:12:59] macgui: QueueCore with preset Fast 1080p30 (Modified)
+[01:12:59] Starting work at: Sat Dec 21 01:12:59 2019
+
+[01:12:59] 1 job(s) to process
+[01:12:59] Starting Task: Analysis Pass
+[01:12:59] Skipping vfr filter
+[01:12:59] Skipping crop/scale filter
+[01:12:59] work: only 1 chapter, disabling chapter markers
+[01:12:59] job configuration:
+[01:12:59]  * source
+[01:12:59]    + /Users/todd/courses/css/udemy/advanced-css-course/Natours/starter/img/video.webm
+[01:12:59]    + title 1, chapter(s) 1 to 1
+[01:12:59]    + container: matroska,webm
+[01:12:59]    + data rate: 5222 kbps
+[01:12:59]  * destination
+[01:12:59]    + /Users/todd/courses/css/udemy/advanced-css-course/Natours/starter/img/video-vp9_opt.mp4
+[01:12:59]    + container: WebM (libavformat)
+[01:12:59]  * video track
+[01:12:59]    + decoder: vp8
+[01:12:59]    + filter
+[01:12:59]      + Comb Detect (mode=3:spatial-metric=2:motion-thresh=1:spatial-thresh=1:filter-mode=2:block-thresh=40:block-width=16:block-height=16)
+[01:12:59]    + Output geometry
+[01:12:59]      + storage dimensions: 1920 x 1080
+[01:12:59]      + pixel aspect ratio: 1 : 1
+[01:12:59]      + display dimensions: 1920 x 1080
+[01:12:59]    + encoder: VP9 (libvpx)
+[01:12:59]      + preset:  medium
+[01:12:59]      + options: -b:v 1800k -crf 31 -minrate 900 -maxrate 2610
+[01:12:59]      + bitrate: 1800 kbps, pass: 1
+[01:12:59]      + color profile: 1-1-5
+[01:12:59] sync: expecting 264 video frames
+[01:12:59] encavcodecInit: VP9 encoder
+[01:12:59] encavcodec: encoding with stored aspect 1/1
+[01:12:59] sync: first pts video is 0
+[01:12:59] sync: "Chapter 1" (1) at frame 1 time 0
+[01:13:02] reader: done. 1 scr changes
+[01:13:03] work: average encoding speed for job is 0.000000 fps
+[01:13:03] comb detect: heavy 2 | light 69 | uncombed 193 | total 264
+[01:13:03] vp8-decoder done: 264 frames, 0 decoder errors
+[01:13:03] sync: got 264 frames, 264 expected
+[01:13:03] sync: framerate min 23.976 fps, max 23.976 fps, avg 23.976 fps
+[01:13:03] Starting Task: Encoding Pass
+[01:13:03] Skipping vfr filter
+[01:13:03] Skipping crop/scale filter
+[01:13:03] work: only 1 chapter, disabling chapter markers
+[01:13:03] job configuration:
+[01:13:03]  * source
+[01:13:03]    + /Users/todd/courses/css/udemy/advanced-css-course/Natours/starter/img/video.webm
+[01:13:03]    + title 1, chapter(s) 1 to 1
+[01:13:03]    + container: matroska,webm
+[01:13:03]    + data rate: 5222 kbps
+[01:13:03]  * destination
+[01:13:03]    + /Users/todd/courses/css/udemy/advanced-css-course/Natours/starter/img/video-vp9_opt.mp4
+[01:13:03]    + container: WebM (libavformat)
+[01:13:03]  * video track
+[01:13:03]    + decoder: vp8
+[01:13:03]    + filter
+[01:13:03]      + Comb Detect (mode=3:spatial-metric=2:motion-thresh=1:spatial-thresh=1:filter-mode=2:block-thresh=40:block-width=16:block-height=16)
+[01:13:03]    + Output geometry
+[01:13:03]      + storage dimensions: 1920 x 1080
+[01:13:03]      + pixel aspect ratio: 1 : 1
+[01:13:03]      + display dimensions: 1920 x 1080
+[01:13:03]    + encoder: VP9 (libvpx)
+[01:13:03]      + preset:  medium
+[01:13:03]      + options: -b:v 1800k -crf 31 -minrate 900 -maxrate 2610
+[01:13:03]      + bitrate: 1800 kbps, pass: 2
+[01:13:03]      + color profile: 1-1-5
+[01:13:03] sync: expecting 264 video frames
+[01:13:03] encavcodecInit: VP9 encoder
+[01:13:03] encavcodec: encoding with stored aspect 1/1
+[01:13:03] sync: first pts video is 0
+[01:13:03] sync: "Chapter 1" (1) at frame 1 time 0
+[01:13:40] reader: done. 1 scr changes
+[01:14:04] work: average encoding speed for job is 5.310511 fps
+[01:14:05] comb detect: heavy 2 | light 69 | uncombed 193 | total 264
+[01:14:05] vp8-decoder done: 264 frames, 0 decoder errors
+[01:14:05] sync: got 264 frames, 264 expected
+[01:14:05] sync: framerate min 23.976 fps, max 23.976 fps, avg 23.976 fps
+[01:14:05] mux: track 0, 264 frames, 2516948 bytes, 1828.68 kbps, fifo 512
+[01:14:05] Finished work at: Sat Dec 21 01:14:05 2019
+
+[01:14:05] libhb: work result = 0

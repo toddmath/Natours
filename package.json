@@ -1,0 +1,32 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:dartsass": "sass sass/main.scss css/style.css --watch --style=\"compressed\"",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "build:verbose": "parcel build index.html --log-level 3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.1",
+    "eyeglass": "^2.4.2",
+    "node-sass": "^4.13.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-data-src": "^1.0.1",
+    "parcel-plugin-imagemin": "^3.0.0",
+    "posthtml-lazyload": "^1.0.5",
+    "posthtml-modules": "^0.4.2",
+    "sass": "^1.26.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "compass-mixins": "^0.12.10",
+    "posthtml": "^0.12.0",
+    "posthtml-img-autosize": "^0.1.4",
+    "sass-mq": "^5.0.1",
+    "typeface-lato": "^0.0.75"
+  }
+}

@@ -1,0 +1,137 @@
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  @include respond(tab-port) {
+    .heading-secondary {
+      @include center-block;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &__group:last-of-type {
+      @include center-block;
+      text-align: center;
+    }
+  }
+
+  &__input {
+    @include font-size(15);
+    @include line-height(15);
+    font-family: "Lato", sans-serif;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    @include size(90%, unset);
+    display: block;
+    outline: none;
+    transition: all 0.3s;
+    @include hardware;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
+
+      &:valid {
+        border-color: $color-primary-dark;
+      }
+
+      &:invalid {
+        border-color: $color-secondary-dark;
+      }
+    }
+
+    @include input-placeholder {
+      color: $color-grey-dark-3;
+    }
+
+    &[required]:placeholder-shown {
+      font-style: italic;
+      letter-spacing: 0.043rem;
+      text-transform: uppercase;
+      display: inline;
+      vertical-align: baseline;
+    }
+
+    &[required]:not(:placeholder-shown) {
+      font-style: normal;
+      @include font-size(15);
+      @include line-height(15);
+      color: $color-grey-dark-3;
+    }
+  }
+
+  &__label {
+    @include font-size(12);
+    @include line-height(12);
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  // labels that are direct siblings of inputs, when placeholder's are showing
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__radio-group {
+    @include size(49%, unset);
+    display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    @include font-size(16);
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  &__radio-button {
+    @include size(3rem, 3rem);
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -0.4rem;
+
+    &::after {
+      display: block;
+      content: "";
+      @include size(1.3rem, 1.3rem);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,177 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    @include transition(0.2s, ease-out);
+    position: relative;
+    box-shadow: 0 0.8rem 2.6rem rgba($color-black, 0.16);
+    @include font-size(16);
+    @include line-height(16);
+    border: none;
+    cursor: pointer;
+    @include unselectable;
+
+    // @include media(">phone", "<=tablet") {
+    //   padding: 1.6rem 3rem;
+    //   @include font-size(14);
+    // }
+
+    // change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    @include transform(translateY(-3px));
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      @include transform(scale(1.4, 1.6));
+      @include opacity(0);
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    @include transform(translateY(-0.1rem));
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    border: 1pt solid $color-primary-dark;
+    @include line-height(16);
+    @include transition(0.3s, ease-out);
+    outline: 3px solid transparent;
+
+    &::after {
+      background-color: $color-white;
+    }
+
+    &:focus {
+      outline: 3px solid $color-white;
+      outline-offset: 3px;
+      @include transform(translateY(-3px));
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+      &::after {
+        @include transform(scale(1.4, 1.6));
+        @include opacity(0);
+      }
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    @include transition(0.3s, ease-out);
+    outline: 3px solid transparent;
+    font-family: "Lato", "sans-serif";
+
+    &::after {
+      background-color: $color-primary;
+    }
+
+    &:focus {
+      outline: 3px solid $color-primary;
+      outline-offset: 3px;
+      @include transform(translateY(-3px));
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+      &::after {
+        @include transform(scale(1.4, 1.6));
+        @include opacity(0);
+      }
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+  }
+
+  &--animated {
+    @include slide-in-from(y, 4rem, 500ms ease-out backwards 750ms);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    @include size(100%);
+    border-radius: 10rem;
+    z-index: -1;
+    @include transition(0.4s, cubic-bezier(0.39, 0.575, 0.565, 1));
+    @include position(absolute, $top: 0, $left: 0);
+  }
+
+  &--heading {
+    flex: 0 1 0;
+    width: 50%;
+    align-self: center;
+
+    @include respond(phone) {
+      max-width: 80%;
+      width: auto;
+    }
+  }
+
+  // @include respond(phone) {
+  //   &--heading {
+  //     // padding: 2rem 4rem !important;
+  //     width: 100%;
+  //   }
+  // }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    @include transition(333ms, cubic-bezier(0.39, 0.575, 0.565, 1));
+    transition-delay: 33ms;
+    @include border-radius-separate(0.5rem, 0.5rem, 0, 0);
+    @include ha;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    @include transform(translateY(-2px));
+    @include border-radius-separate(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    @include transform(translateY(0));
+  }
+
+  &:focus {
+    outline: 3px solid $color-primary;
+    outline-offset: 3px;
+    @include transform(translateY(-2px));
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    @include border-radius-separate(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}

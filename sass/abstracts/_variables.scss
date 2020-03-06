@@ -1,0 +1,61 @@
+/// Typography
+$base-font-size: 10px !default;
+$browser-default-font-size: 16px;
+$rem-with-px-fallback: true !default;
+$default-font-size: 1.6rem;
+
+/// Colors
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: rgb(0, 0, 0);
+
+// MISC (border, radius, etc)
+$border-radius: 3px;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+// animations, transitions, cubicbenz
+$navi-benz: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$navi-link-benz: cubic-bezier(0.23, 1, 0.32, 1);
+$scale-benz: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$photo-benz: cubic-bezier(0.165, 0.84, 0.44, 1);
+$footer-link-benz: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+$card-benz: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+// modularscale
+$modularscale: (
+  base: 1rem 1.2rem 1.6rem,
+  ratio: 1.5,
+  420px: (
+    ratio: 1.5
+  ),
+  740px: (
+    ratio: 1.6
+  ),
+  980px: (
+    ratio: 1.7
+  ),
+  1300px: (
+    ratio: 1.8
+  )
+);

@@ -1,0 +1,252 @@
+.card {
+  // FUNCTIONALITY
+  // -webkit-perspective: 110rem;
+  // -moz-perspective: 110rem;
+  // perspective: 110rem;
+  @include hardware(false, 100rem);
+  position: relative;
+  width: 100%;
+  height: 52rem;
+  perspective-origin: center;
+  transform-style: preserve-3d;
+
+  &__side {
+    @include hardware(true, 100rem);
+    perspective-origin: center;
+    transform-style: preserve-3d;
+    height: 52rem;
+    transition: 0.8s transform $card-benz;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // -webkit-backface-visibility: hidden;
+    // -moz-backface-visibility: hidden;
+    // backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+      @include transform(rotateY(0deg));
+    }
+
+    &--back {
+      @include transform(rotateY(180deg));
+
+      &-1 {
+        @include background-gradient(
+          $color-secondary-light,
+          $color-secondary-dark,
+          vertical
+        );
+      }
+
+      &-2 {
+        @include background-gradient(
+          $color-primary-light,
+          $color-primary-dark,
+          vertical
+        );
+      }
+
+      &-3 {
+        @include background-gradient(
+          $color-tertiary-light,
+          $color-tertiary-dark,
+          vertical
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    @include transform(rotateY(-180deg));
+  }
+
+  &:hover &__side--back {
+    @include transform(rotateY(0deg));
+  }
+
+  // FRONT SIDE STYLES
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    @include border-radius-separate(3px, 3px, unset, unset);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/nat-5.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../img/nat-6.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../img/nat-7.jpg);
+    }
+  }
+
+  &__heading {
+    @include font-size(25);
+    @include line-height(25);
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    width: 70%;
+    @include position(absolute, 12rem, 2rem, unset, unset);
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    @include line-height(50);
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+    letter-spacing: 0.112rem;
+    font-weight: 300;
+    @include line-height(26);
+    text-transform: capitalize;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        @include font-size(15);
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  // FRONT SIDE STYLES
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    @include line-height(14);
+    // margin-bottom: 0.5rem;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    @include line-height(60);
+  }
+
+
+
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: $border-radius;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      height: auto;
+      transition: none;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        @include transform(rotateY(0));
+        clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      @include transform(rotateY(0));
+    }
+
+    // FRONT SIDE STYLES
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 6rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 5rem;
+      @include line-height(50);
+      font-weight: 200;
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+  }
+}

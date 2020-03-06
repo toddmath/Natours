@@ -1,0 +1,92 @@
+.story {
+  @include size(75%, unset);
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: $color-grey-light-1;
+  opacity: 0.9;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  @include font-size(16);
+  @include transform(skewX(-12deg));
+  @include transition(220ms, $navi-benz);
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    @include transform(skewX(0deg));
+  }
+
+  // & > * {
+  //   @include transform(skewX(12deg));
+  // }
+
+  &__shape {
+    @include hardware;
+    @include size(15rem, 15rem);
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    // * make a circle, first number is radius, second and third postion of center
+    // * needs float and height and width
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    // @include transform(translateX(-3rem));
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0deg);
+    }
+  }
+
+  &__img {
+    @include size(auto, 100%);
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    opacity: 1 !important;
+  }
+
+  &__text {
+    @include transform(skewX(12deg));
+
+    @include respond(phone) {
+      @include transform(skewX(0deg));
+    }
+  }
+
+  &__caption {
+    @include center-both;
+    color: $color-white;
+    text-transform: uppercase;
+    @include font-size(17);
+    text-align: center;
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    .story__caption {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    .story__img {
+      transform: translateX(-4rem) scale(1);
+      filter: blur(3px);
+    }
+  }
+
+  // &:hover &__img {
+
+  // }
+}

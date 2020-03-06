@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/icon-font.css">
+  <!-- <link rel="stylesheet" href="css/open-iconic.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <script type="text/javascript" src="js/prefixfree.min.js"></script> -->
+  <link rel="stylesheet" href="sass/main.scss">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <title>Natours | Exciting tours for adventurous people</title>
+</head>
+
+<div class="navigation">
+  <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+  <label for="navi-toggle" class="navigation__button" id="navi-button" tabindex="0">
+    <span class="navigation__icon">&nbsp;</span>
+  </label>
+
+  <div class="navigation__background" id="navigation-background">&nbsp;</div>
+
+  <nav class="navigation__nav">
+    <ul class="navigation__list">
+      <li class="navigation__item"><a href="#section-about" class="navigation__link">About Natours</a></li>
+      <li class="navigation__item"><a href="#section-features" class="navigation__link">Your benefits</a></li>
+      <li class="navigation__item"><a href="#section-tours" class="navigation__link">Popular tours</a></li>
+      <li class="navigation__item"><a href="#section-stories" class="navigation__link">Stories</a></li>
+      <li class="navigation__item"><a href="#section-book" class="navigation__link">Book now</a></li>
+    </ul>
+  </nav>
+</div>
+
+<body>
+  <header class="header">
+    <div class="header__logo-box">
+      <img src="img/logo-white-opt.png" alt="Logo" class="header__logo lazyload">
+    </div>
+
+    <div class="header__text-box">
+      <span class="heading-primary">
+        <h1 class="heading-primary--main heading-fancy">Outdoors</h1>
+        <span class="heading-primary--sub">is where life happens</span>
+      </span>
+      <a href="#section-tours" class="btn btn--white btn--animated btn--heading">Discover our tours</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-about" id="section-about">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          Exciting tours for adventurous people
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-2">
+          <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature.</h3>
+          <p class="paragraph">
+            You look…perfect. I'm doing mental jumping jacks. I'm generally confused most of the time. I think he's got
+            a crush on you, Dex!
+            Watching ice melt. This is fun. I have a dark side, too. Under normal circumstances, I'd take that as a
+            compliment.
+            Oh I beg to differ, I think we have a lot to discuss.
+          </p>
+
+          <h3 class="heading-tertiary u-margin-bottom-small">Live Adventures like you never have before.</h3>
+          <p class="paragraph">
+            I'm Dexter, and I'm not sure what I am. I'm generally confused most of the time. I think he's got a crush on
+            you, Dex!
+            Rorschach would say you have a hard time relating to others. I like seafood.
+          </p>
+
+          <a href="#section-features" class="btn-text">Learn more &rarr;</a>
+        </div>
+        <div class="col-1-of-2">
+          <div class="composition">
+            <picture>
+              <source
+                data-srcset="img/nat-1-400x.jpg 400w, img/nat-1-600x.jpg 600w, img/nat-1-800x.jpg 800w, img/nat-1-1000x.jpg 1000w"
+                sizes="(min-width: 50rem) 15vw, 25vw">
+              <img data-src="img/nat-1-800x.jpg" alt="Photo 1" loading="lazy"
+                class="composition__photo composition__photo--p1">
+            </picture>
+            <picture>
+              <source
+                data-srcset="img/nat-2-400x.jpg 400w, img/nat-2-600x.jpg 600w, img/nat-2-800x.jpg 800w, img/nat-2-1000x.jpg 1000w"
+                sizes="(min-width: 50rem) 15vw, 25vw">
+              <img data-src="img/nat-2-800x.jpg" alt="Photo 2" loading="lazy"
+                class="composition__photo composition__photo--p2">
+            </picture>
+            <picture>
+              <source
+                data-srcset="img/nat-3-400x.jpg 400w, img/nat-3-600x.jpg 600w, img/nat-3-800x.jpg 800w, img/nat-3-1000x.jpg 1000w"
+                sizes="(min-width: 50rem) 15vw, 25vw">
+              <img data-src="img/nat-3-800x.jpg" alt="Photo 3" loading="lazy"
+                class="composition__photo composition__photo--p3">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-features" id="section-features">
+
+      <div class="section-features--row row">
+        <div class="col-1-of-4">
+          <div class="feature-box">
+            <!-- <img class="feature-box__icon icon" src="img/svg/globe.svg" alt="Globe Icon"> -->
+            <!-- <img src="img/icon/opt/basic_world.svg" alt="" class="feature-box__icon icon"> -->
+            <i class="feature-box__icon icon icon-basic-world"></i>
+            <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
+            <p class="feature-box__text">
+              Finding a needle in a haystack isn't hard when every straw is
+              computerized.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-1-of-4">
+          <div class="feature-box">
+            <!-- <img class="feature-box__icon icon" src="img/svg/globe.svg" alt="Globe Icon"> -->
+            <!-- <img src="img/icon/opt/basic_world.svg" alt="" class="feature-box__icon icon"> -->
+            <i class="feature-box__icon icon icon-basic-compass"></i>
+            <h3 class="heading-tertiary u-margin-bottom-small">Meet Nature</h3>
+            <p class="feature-box__text">
+              Finding a needle in a haystack isn't hard when every straw is
+              computerized.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-1-of-4">
+          <div class="feature-box">
+            <!-- <img class="feature-box__icon icon" src="img/svg/globe.svg" alt="Globe Icon"> -->
+            <!-- <img src="img/icon/opt/basic_world.svg" alt="" class="feature-box__icon icon"> -->
+            <i class="feature-box__icon icon icon-basic-map"></i>
+            <h3 class="heading-tertiary u-margin-bottom-small">Find your way</h3>
+            <p class="feature-box__text">
+              Finding a needle in a haystack isn't hard when every straw is
+              computerized.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-1-of-4">
+          <div class="feature-box">
+            <!-- <img class="feature-box__icon icon" src="img/svg/globe.svg" alt="Globe Icon"> -->
+            <!-- <img src="img/icon/opt/basic_world.svg" alt="" class="feature-box__icon icon"> -->
+            <i class="feature-box__icon icon icon-basic-heart"></i>
+            <h3 class="heading-tertiary u-margin-bottom-small">Live a healthier life</h3>
+            <p class="feature-box__text">
+              Finding a needle in a haystack isn't hard when every straw is
+              computerized.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tours" id="section-tours">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          Most popular tours
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--1">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1">The Sea Explorer</span>
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>3 day tour</li>
+                  <li>Up to 30 people</li>
+                  <li>2 tour guides</li>
+                  <li>Sleep in cozy hotels</li>
+                  <li>Difficulty: easy</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <p class="card__price-value">$297</p>
+                </div>
+                <a href="#popup" class="btn btn--white">Book now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--2">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--2">The Forest Hiker</span>
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>7 day tour</li>
+                  <li>Up to 40 people</li>
+                  <li>6 tour guides</li>
+                  <li>Sleep in provided tents</li>
+                  <li>Difficulty: medium</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <p class="card__price-value">$497</p>
+                </div>
+                <a href="#popup" class="btn btn--white">Book now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--3">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--3">The Snow Adventurer</span>
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>5 day tour</li>
+                  <li>Up to 15 people</li>
+                  <li>3 tour guides</li>
+                  <li>Sleep in provided tents</li>
+                  <li>Difficulty: hard</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-3">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <p class="card__price-value">$897</p>
+                </div>
+                <a href="#popup" class="btn btn--white">Book now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="u-center-text u-margin-top-huge">
+        <a href="#section-tours" class="btn btn--green">Discover all tours</a>
+      </div>
+
+    </section>
+
+    <section class="section-stories" id="section-stories">
+      <div class="bg-video-overlay">
+        <div class="bg-video">
+          <video class="bg-video__content" id="bgvideo" width="100vw"
+            poster="/img/coverr-amalfi-coast-1570371443102.jpg" autoplay muted loop preload="auto">
+            <source src="/img/amalfi-coast-x265.mp4" type="video/mp4">
+            <source src="/img/amalfi-coast-vp9.webm" type="video/webm">
+            <source src="/img/amalfi-coast-x264.mp4" type="video/mp4">
+            <p>Your browser is not supported!</p>
+          </video>
+          <caption>Background video of the beach</caption>
+        </div>
+      </div>
+
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          We make people genuinely happy
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="story">
+          <figure class="story__shape">
+            <picture>
+              <source data-srcset="img/nat-8-600x.jpg 600w, img/nat-8-800x.jpg 800w" sizes="15vw">
+              <img data-src="img/nat-8-600x.jpg" loading="lazy" alt="Person on a tour" class="story__img lazyload">
+            </picture>
+            <figcaption class="story__caption">Mary Smith</figcaption>
+          </figure>
+          <div class="story__text">
+            <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
+            <p>Watching ice melt. This is fun. I have a dark side, too. Under normal circumstances, I'd take that as a
+              compliment. Oh I beg to differ, I think we have a lot to discuss. I'm Dexter, and I'm not sure what I am.
+              I'm generally confused most of the time. I think he's got a crush on
+              you, Dex!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="story">
+          <figure class="story__shape">
+            <picture>
+              <source data-srcset="img/nat-9-600x.jpg 600w, img/nat-9-800x.jpg 800w" sizes="15vw">
+              <img data-src="img/nat-9-600x.jpg" loading="lazy" alt="Person on a tour" class="story__img lazyload">
+            </picture>
+            <figcaption class="story__caption">Jack Wilson</figcaption>
+          </figure>
+          <div class="story__text">
+            <h3 class="heading-tertiary u-margin-bottom-small">WOW! My life is completely different now</h3>
+            <p>Watching ice melt. This is fun. I have a dark side, too. Under normal circumstances, I'd take that as a
+              compliment. Oh I beg to differ, I think we have a lot to discuss. I'm Dexter, and I'm not sure what I am.
+              I'm generally confused most of the time. I think he's got a crush on
+              you, Dex!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="u-center-text u-margin-top-huge">
+        <a href="#section-stories" class="btn-text">Read all stories &rarr;</a>
+      </div>
+    </section>
+
+    <section class="section-book" id="section-book">
+      <div class="row">
+        <div class="book">
+          <div class="book__form">
+            <form action="#" class="form">
+              <div class="u-margin-bottom-medium">
+                <h2 class="heading-secondary">
+                  Start booking now
+                </h2>
+              </div>
+
+              <div class="form__group">
+                <input type="text" class="form__input" placeholder="Full Name" aria-placeholder="Full Name" id="name"
+                  required>
+                <label for="name" class="form__label">Full name</label>
+              </div>
+
+              <div class="form__group">
+                <input type="email" class="form__input" placeholder="Email address" aria-placeholder="Email address"
+                  id="email" required>
+                <label for="email" class="form__label">Email address</label>
+              </div>
+
+              <div class="form__group u-margin-bottom-medium">
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="small" name="size">
+                  <label for="small" class="form__radio-label" tabindex="0">
+                    <span class="form__radio-button"></span>
+                    Small tour group
+                  </label>
+                </div>
+
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="large" name="size">
+                  <label for="large" class="form__radio-label" tabindex="0">
+                    <span class="form__radio-button"></span>
+                    Large tour group
+                  </label>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <button class="btn btn--green">Next step &rarr;</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__logo-box">
+      <img src="img/logo-green-2x.png" loading="lazy" alt="Full logo" class="footer__logo lazyload">
+    </div>
+    <div class="row">
+      <div class="col-1-of-2">
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-1-of-2">
+        <p class="footer__copyright">
+          Designed by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#"
+            class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed
+          to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to
+          the original author, Jonas Schmedtmann, is of course highly appreciated!
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popup" id="popup">
+    <div class="popup__content">
+      <div class="popup__left">
+        <img data-srcset="img/nat-8-400x.jpg 400w, img/nat-8-600x.jpg 600w, img/nat-8-800x.jpg 800w"
+          data-src="img/nat-8-600x.jpg" loading="lazy" alt="Tour Photo" class="popup__img">
+        <img data-srcset="img/nat-9-400x.jpg 400w, img/nat-9-600x.jpg 600w, img/nat-9-800x.jpg 800w"
+          data-src="img/nat-9-600x.jpg" loading="lazy" alt="Tour Photo" class="popup__img">
+      </div>
+      <div class="popup__right">
+        <a href="#section-tours" class="popup__close">&times;</a>
+        <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+        <h3 class="heading-tertiary u-margin-bottom-medium">Important &ndash; Please read these terms before booking
+        </h3>
+        <p class="popup__text">Well, the way they make shows is, they make one show. That show's called a pilot. Then
+          they show that show to the people
+          who make shows, and on the strength of that one show they decide if they're going to make more shows. Some
+          pilots get
+          picked and become television programs. Some don't, become nothing. She starred in one of the ones that became
+          nothing. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most
+          popular gun in
+          American crime. Do you believe that shit? It actually says that in the little book that comes with it: the
+          most popular
+          gun in American crime. Like they're actually proud of that shit.</p>
+        <div class="u-center-children">
+          <a href="#section-book" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/index.ts"></script>
+</body>
+
+</html>

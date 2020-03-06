@@ -1,0 +1,246 @@
+// @include font-face(Lato, "./fonts/lato-v16-latin-100", 100, normal);
+// @include font-face(Lato, "./fonts/lato-v16-latin-100italic", 100, italic);
+// @include font-face(Lato, "./fonts/lato-v16-latin-300", 300, normal);
+// @include font-face(Lato, "./fonts/lato-v16-latin-300italic", 300, italic);
+// @include font-face(Lato, "./fonts/lato-v16-latin-regular", 400, normal);
+// @include font-face(Lato, "./fonts/lato-v16-latin-italic", 400, italic);
+// @include font-face(Lato, "./fonts/lato-v16-latin-700", 700, normal);
+// @include font-face(Lato, "./fonts/lato-v16-latin-700italic", 700, italic);
+// @include font-face(Lato, "./fonts/lato-v16-latin-900", 900, normal);
+// @include font-face(Lato, "./fonts/lato-v16-latin-900italic", 900, italic);
+
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-100", 100, normal, eot svg ttf woff woff2);
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-100italic", 100, italic, eot svg ttf woff woff2);
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-300", 300, normal, eot svg ttf woff woff2);
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-300italic", 300, italic, eot svg ttf woff woff2);
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-700", 700, normal, eot svg ttf woff woff2);
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-700italic", 700, italic, eot svg ttf woff woff2);
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-900", 900, normal, eot svg ttf woff woff2);
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-900italic", 900, italic, eot svg ttf woff woff2);
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-regular", 400, normal, eot svg ttf woff woff2);
+// @include scut-font-face(Lato, "./fonts/lato-v16-latin-italic", 400, italic, eot svg ttf woff woff2);
+
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-100",
+  100,
+  normal,
+  eot svg ttf woff woff2
+);
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-100italic",
+  100,
+  italic,
+  eot svg ttf woff woff2
+);
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-300",
+  300,
+  normal,
+  eot svg ttf woff woff2
+);
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-300italic",
+  300,
+  italic,
+  eot svg ttf woff woff2
+);
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-700",
+  700,
+  normal,
+  eot svg ttf woff woff2
+);
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-700italic",
+  700,
+  italic,
+  eot svg ttf woff woff2
+);
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-900",
+  900,
+  normal,
+  eot svg ttf woff woff2
+);
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-900italic",
+  900,
+  italic,
+  eot svg ttf woff woff2
+);
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-regular",
+  400,
+  normal,
+  eot svg ttf woff woff2
+);
+@include scut-font-face(
+  Lato,
+  "../css/fonts/lato-v16-latin-italic",
+  400,
+  italic,
+  eot svg ttf woff woff2
+);
+
+body {
+  @include antialias;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  @include line-height(17);
+  color: $color-grey-dark;
+  @include background-size(100%);
+  background-color: $color-white;
+}
+
+@include pseudoAnti;
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  text-align: center;
+  @include size(auto, 100%);
+  white-space: nowrap;
+
+  // @include respond(phone) {
+  //   width: 110%;
+  // }
+
+  &--main {
+    @include line-height(64);
+    display: inline-block;
+    @include size(100%, 100%);
+    @include font-size(60);
+    font-weight: 700;
+    letter-spacing: 3.6rem;
+    // @include slide-in-from(x, -10rem, 1s ease-out);
+    white-space: normal;
+    text-align: center;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+  }
+
+  &--sub {
+    @include line-height(26);
+    display: inline-block;
+    @include size(auto, 100%);
+    @include font-size(22);
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    word-spacing: -0.9rem;
+    @include slide-in-from(x, 10rem, 1s ease-out);
+    white-space: normal;
+    text-align: center;
+
+    @include respond(phone) {
+      letter-spacing: 0.6rem;
+      width: 100%;
+      text-align: left;
+    }
+  }
+}
+
+.heading-secondary {
+  @include font-size(35);
+  text-transform: uppercase;
+  font-weight: 700;
+  @include background-gradient(
+    $color-primary-light,
+    $color-primary-dark,
+    horizontal
+  );
+  @include line-height(35);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  @include transition(0.2s, ease-out);
+  letter-spacing: 2px;
+  @include hardware;
+
+  &:hover {
+    @include transform(skew(15deg, 2deg) scale(1.1));
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+}
+
+.heading-tertiary {
+  @include font-size(16);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  @include font-size(16);
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.heading-fancy {
+  @include line-height(64);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+  @include size(100%, 100%);
+  @include font-size(60);
+  font-weight: 700;
+  white-space: normal;
+  text-align: center;
+
+  @include respond(phone) {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+
+  span {
+    width: auto;
+    margin: 0 -1pt;
+    padding: 0;
+    line-height: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    opacity: 0;
+    transition: all 700ms $scale-benz, color 1050ms $scale-benz,
+      opacity 650ms $navi-benz;
+    transform: translateY(50px);
+    display: inline-block;
+    color: $color-primary;
+  }
+
+  .fade {
+    display: inline-block;
+    opacity: 1 !important;
+    transform: translateY(0px);
+    color: $color-white;
+  }
+
+  // &:before {
+  //   content: "";
+  //   margin-right: 1.5rem;
+  // }
+}

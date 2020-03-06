@@ -1,0 +1,120 @@
+.header {
+  @include size(unset, calc(100vh - 2 * 3rem));
+  background-image: linear-gradient(
+      56deg,
+      rgba($color-white, 0.065) 0%,
+      transparent 69%,
+      transparent 69%,
+      rgba(160, 160, 160, 0.025) 100%
+    ),
+    linear-gradient(
+      194deg,
+      rgba(102, 102, 102, 0.185) 0%,
+      rgba(102, 102, 102, 0.185) 60%,
+      rgba(67, 67, 67, 0.185) 60%,
+      rgba(67, 67, 67, 0.185) 100%
+    ),
+    linear-gradient(
+      326deg,
+      transparent 0%,
+      rgba(20, 20, 20, 0.125) 45%,
+      rgba(66, 66, 66, 0.02) 45%,
+      transparent 100%
+    ),
+    linear-gradient(
+      283deg,
+      transparent 0%,
+      transparent 82%,
+      rgba($color-primary, 0.14) 82%,
+      rgba(28, 28, 28, 0.125) 100%
+    ),
+    linear-gradient(
+      33deg,
+      rgba(20, 20, 20, 0.09) 0%,
+      rgba(20, 20, 20, 0.09) 62%,
+      rgba(136, 136, 136, 0.009) 62%,
+      rgba(136, 136, 136, 0.009) 100%
+    ),
+    linear-gradient(
+      190deg,
+      rgba(206, 206, 206, 0.04) 0%,
+      rgba(206, 206, 206, 0.04) 58%,
+      rgba(6, 6, 6, 0.06) 58%,
+      rgba(6, 6, 6, 0.02) 100%
+    ),
+    linear-gradient(
+      304deg,
+      rgba(162, 162, 162, 0.025) 0%,
+      rgba(162, 162, 162, 0.025) 27%,
+      rgba(24, 24, 24, 0.025) 27%,
+      rgba(24, 24, 24, 0.025) 100%
+    ),
+    linear-gradient(
+      186deg,
+      rgba(166, 166, 166, 0.002) 0%,
+      rgba(166, 166, 166, 0.002) 5%,
+      rgba(210, 210, 210, 0.002) 5%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.45),
+      rgba($color-primary-dark, 0.65)
+    ),
+    url("../img/hero-medium.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(85vh - 2 * 3rem), 0 100%);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(85vh - 2 * 3rem),
+    0 100%
+  ); // 80vh - 60px
+  position: relative;
+  // @include hardware;
+
+  @include respond(tab-land) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+
+  @include respond(tab-port) {
+    @include size(unset, 100vh);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+  }
+
+  @include respond(phone) {
+    @include size(unset, 100vh);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 89vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 89vh, 0 100%);
+  }
+
+  &__logo-box {
+    @include position(absolute, $top: 4rem, $left: 4rem);
+  }
+
+  &__logo {
+    @include size(unset, 3.5rem);
+  }
+
+  &__text-box {
+    @include center-both;
+    top: 42%;
+    text-align: center;
+    @include size(auto, unset);
+    @include box-sizing(border-box);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    @include hardware;
+
+    @include respond(phone) {
+      max-width: 90vw;
+      width: auto;
+      align-items: stretch;
+    }
+  }
+}

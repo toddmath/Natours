@@ -1,0 +1,25 @@
+@import "mixins";
+@import "variables";
+
+/// Clearfix extend
+/// @access public
+/// @example scss - Usage
+///   .foo {
+///     @extend %clearfix;
+///   }
+%clearfix {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+%light-gradient-background {
+  @include background-gradient(lighten($color-grey-dark, 40%), lighten($color-grey-dark, 45%), vertical);
+}

@@ -1,0 +1,227 @@
+// html {
+// Initializes our 1rem = $base-font-size font-size system
+
+// font-size: $base-font-size;
+
+// @include reset-html5;
+// @include reset-focus;
+// }
+
+// body {
+//   @include box-sizing(border-box);
+// }
+
+.section-about {
+  @include background-gradient(
+    darken($color-white, 3),
+    $color-grey-light-1,
+    vertical
+  );
+  padding: 25rem 0;
+  margin-top: -20vh;
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+    margin-top: -12vh;
+  }
+
+  .row {
+    @include respond(tab-port) {
+      max-width: 60rem;
+    }
+  }
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      56deg,
+      rgba($color-white, 0.065) 0%,
+      transparent 69%,
+      transparent 69%,
+      rgba(160, 160, 160, 0.025) 100%
+    ),
+    linear-gradient(
+      194deg,
+      rgba(102, 102, 102, 0.185) 0%,
+      rgba(102, 102, 102, 0.185) 60%,
+      rgba(67, 67, 67, 0.185) 60%,
+      rgba(67, 67, 67, 0.185) 100%
+    ),
+    linear-gradient(
+      326deg,
+      transparent 0%,
+      rgba(20, 20, 20, 0.125) 45%,
+      rgba(66, 66, 66, 0.02) 45%,
+      transparent 100%
+    ),
+    linear-gradient(
+      283deg,
+      transparent 0%,
+      transparent 82%,
+      rgba($color-primary, 0.14) 82%,
+      rgba(28, 28, 28, 0.125) 100%
+    ),
+    linear-gradient(
+      33deg,
+      rgba(20, 20, 20, 0.09) 0%,
+      rgba(20, 20, 20, 0.09) 62%,
+      rgba(136, 136, 136, 0.009) 62%,
+      rgba(136, 136, 136, 0.009) 100%
+    ),
+    linear-gradient(
+      190deg,
+      rgba(206, 206, 206, 0.04) 0%,
+      rgba(206, 206, 206, 0.04) 58%,
+      rgba(6, 6, 6, 0.06) 58%,
+      rgba(6, 6, 6, 0.02) 100%
+    ),
+    linear-gradient(
+      304deg,
+      rgba(162, 162, 162, 0.025) 0%,
+      rgba(162, 162, 162, 0.025) 27%,
+      rgba(24, 24, 24, 0.025) 27%,
+      rgba(24, 24, 24, 0.025) 100%
+    ),
+    linear-gradient(
+      186deg,
+      rgba(166, 166, 166, 0.002) 0%,
+      rgba(166, 166, 166, 0.002) 5%,
+      rgba(210, 210, 210, 0.002) 5%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.45),
+      rgba($color-primary-dark, 0.65)
+    ),
+    url("../img/nat-4-medium.jpeg");
+  background-size: cover;
+  background-position: right;
+  // background-blend-mode: overlay;
+  @include transform(skewY(-5.5deg));
+  @include size(100%, auto);
+  // clip-path: polygon(0 calc(30vh - 2 * 3rem), 100% 0, 100% calc(70vh + 2 * 3rem), 0 100%);
+  margin-top: -10rem;
+
+  & > * {
+    @include transform(skewY(5.5deg));
+  }
+
+  &--row {
+    @include respond(tab-land) {
+      padding: 0 4rem;
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+    background-position: left;
+  }
+}
+
+.section-tours {
+  background-color: rgba($color-grey-light-1, 1);
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 15rem 0;
+  }
+}
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0;
+  background-color: rgba($color-white, 0.65);
+  background-blend-mode: luminosity;
+  // filter: saturate(1.2);
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.section-book {
+  padding: 15rem 0;
+  @include background-gradient(
+    $color-primary-light,
+    $color-primary-dark,
+    vertical
+  );
+
+  @include respond(tab-land) {
+    padding: 10rem 5rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+
+    .row {
+      max-width: 60rem;
+    }
+  }
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.78) 0%,
+      rgba($color-white, 0.78) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10-medium.jpeg);
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-position: right;
+  @include size(unset, 50rem);
+  border-radius: $border-radius;
+  box-shadow: 0 1rem 1rem rgba($color-black, 0.25);
+  @include transition(0.33s, $card-benz);
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.4);
+  }
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/nat-10-medium.jpeg);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 65%,
+        rgba($color-white, 0.7) 65%
+      ),
+      url(../img/nat-10-small.jpeg);
+
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__form {
+    @include size(50%, unset);
+    padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}
